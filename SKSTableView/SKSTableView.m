@@ -718,7 +718,7 @@ static void *SubRowObjectKey;
 
 - (NSInteger)subRow
 {
-    id myclass = [self class];
+    id myclass = [SKSTableView class];
     id subRowObj = objc_getAssociatedObject(myclass, SubRowObjectKey);
     return [subRowObj integerValue];
 }
@@ -726,7 +726,7 @@ static void *SubRowObjectKey;
 - (void)setSubRow:(NSInteger)subRow
 {
     id subRowObj = [NSNumber numberWithInteger:subRow];
-    id myclass = [self class];
+    id myclass = [SKSTableView class];
     objc_setAssociatedObject(myclass, SubRowObjectKey, subRowObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
